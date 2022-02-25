@@ -1,7 +1,7 @@
 import streamlit as st
 import pickle
 import requests   # To hit the API
-# to run the file, write: streamlit run <filename>
+
 similarity = pickle.load(open('similarity.pkl', 'rb'))  # This will give back the similarity array that we dumped
 movies_df = pickle.load(open('movies.pkl', 'rb'))  # Opening in read binary mode. Will give us back our dataframe that we dumped
 movies_list = movies_df['title'].values  # Accessing the new_df dataframe and getting the movies(present in title column)
