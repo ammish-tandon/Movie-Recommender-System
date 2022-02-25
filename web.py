@@ -7,7 +7,7 @@ movies_df = pickle.load(open('movies.pkl', 'rb'))  # Opening in read binary mode
 movies_list = movies_df['title'].values  # Accessing the new_df dataframe and getting the movies(present in title column)
 
 def fetch_poster(movie_id):
-     response = requests.get(f'https://api.themoviedb.org/3/movie/{movie_id}?api_key=40cb915095a5c52bb85d7d1b9b3a0190&language=en-US')
+     response = requests.get(f'https://api.themoviedb.org/3/movie/{movie_id}?api_key=********************************&language=en-US')  # API Key Masked for security purposes.
      data = response.json()   # Converting it to JSON
      return 'http://image.tmdb.org/t/p/w500/' + data['poster_path']
 
